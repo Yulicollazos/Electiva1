@@ -4,6 +4,7 @@ import { MenuSider } from '../../components/MenuComponents/MenuSider/MenuSider';
 import { MenuTop } from '../../components/MenuComponents/MenuTop/MenuTop';
 import { FooterPage } from '../../components/FooterPage/FooterPage';
 import './GeneralLayouts.scss';
+import { Logout } from '../../components/MenuComponents/Logout';
 
 
 export const GeneralLayouts = (props) => {
@@ -13,20 +14,20 @@ export const GeneralLayouts = (props) => {
 
   return (
     <Layout>
-      <MenuSider>
-        menuCollapsed = {menuCollapsed}
-      </MenuSider>
-      <Layout className='general-layout'>
-        <Header className='general-layout_header'>
-          <MenuTop menuCollapsed = {menuCollapsed}
-          setMenuCollapsed= {setMenuCollapsed}
-          />
-        </Header>
-        <Content className='general.layout__content'>{children}</Content>
-        <Footer className='general.layout__footer'>
-          <FooterPage></FooterPage>
-        </Footer>
-      </Layout>
+    <MenuSider menuCollapsed={menuCollapsed} />
+    <Layout className="general-layout">
+      <Header className="general-layout-header">
+        <MenuTop
+          menuCollapsed={menuCollapsed}
+          setMenuCollapsed={setMenuCollapsed}
+        />
+        <Logout className="general-layout-header-logout" />
+      </Header>
+      <Content className="general-layout-content">{children}</Content>
+      <Footer className="general-layout-footer">
+        <FooterPage></FooterPage>
+      </Footer>
     </Layout>
+  </Layout>
   );
 };

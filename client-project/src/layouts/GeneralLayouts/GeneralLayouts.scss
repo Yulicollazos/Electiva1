@@ -1,7 +1,7 @@
 @import '../../scss/index.scss';
 
-.general-layout{
-    &_header{
+.general-layout {
+    &-header {
         background-color: white;
         height: 50px;
         display: flex;
@@ -21,18 +21,20 @@
                 transform: scale(1.2, 1.2);
             }
             &:focus,
-            &:active{
+            &:active {
                 color: darkblue;
             }
         }
     }
-    %__content{
+
+    &-content {
         min-height: calc(100vh - 75px);
         padding-top: 90px;
         padding-left: 15px;
     }
-    &__footer{
+
+    &-footer {
         width: 100%;
-        padding: 0;
+        padding: 0; 
     }
 }

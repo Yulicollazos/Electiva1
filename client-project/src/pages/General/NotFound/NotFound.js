@@ -5,3 +5,5 @@ export const NotFound = () => {
     <div>404: Página no encontrada</div>
   )
 }
+
+

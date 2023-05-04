@@ -5,6 +5,7 @@ import { Layout , Menu} from 'antd';
 import "./MenuSider.scss";
 import SubMenu from 'antd/es/menu/SubMenu';
 
+
 export const MenuSider = (props) => {
   const {Sider} = Layout;
   const navigate = useNavigate();
@@ -16,6 +17,11 @@ export const MenuSider = (props) => {
       key: "products",
       icon: <TeamOutlined/>,
       label: "Portafolio de servicios",
+      SubMenu:[
+        { key: "portafolio/list", icon: <TeamOutlined/>, label: "Lista de clientes"},
+        { key: "portafolio/new", icon: <TeamOutlined/>, label: "Nuevo cliente"},
+      ],
+      
     },
     {
       key: "clients",
